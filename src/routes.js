@@ -1,11 +1,10 @@
+// controllers
+const User = require('./app/controller/user.controller');
+
 module.exports = [
   {
     method: 'GET',
     url: '/',
-    handler: function (request, reply) {
-      reply.send({
-        status: 'the server is online',
-      });
-    },
+    handler: User.index,
   },
 ];
