@@ -1,0 +1,16 @@
+{
+  "name": "fastfy-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^3.6.0",
+    "jest": "^26.5.3",
+    "knex": "^0.21.6",
+    "pg": "^8.4.1"
+  }
+}
