@@ -3,8 +3,8 @@ const User = require('./app/controller/user.controller');
 
 module.exports = [
   {
-    method: 'GET',
-    url: '/',
-    handler: User.index,
+    method: 'POST',
+    url: '/user',
+    handler: User.store,
   },
 ];
