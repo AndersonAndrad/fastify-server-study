@@ -4,14 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "test": "jest"
   },
   "dependencies": {
+    "@types/jest": "^26.0.14",
     "dotenv": "^8.2.0",
     "fastify": "^3.6.0",
     "jest": "^26.5.3",
     "knex": "^0.21.6",
     "pg": "^8.4.1",
+    "supertest": "^5.0.0",
     "yup": "^0.29.3"
   }
 }
