@@ -7,4 +7,9 @@ module.exports = [
     url: '/user',
     handler: User.store,
   },
+  {
+    method: 'GET',
+    url: '/user',
+    handler: User.index,
+  },
 ];

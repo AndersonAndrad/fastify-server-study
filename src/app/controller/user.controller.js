@@ -38,13 +38,21 @@ class UserController {
       password_hash,
     });
 
-    return reply.send({
-      user: {
-        id,
-        name,
-        email,
-      },
-    });
+    return reply
+      .send({
+        user: {
+          id,
+          name,
+          email,
+        },
+      })
+      .code(200);
+  }
+
+  async index(request, reply) {
+    const users = await connection('users').select('id', 'name', 'email');
+
+    return reply.send({ users }).code(200);
   }
 }
 

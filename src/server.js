@@ -1,11 +1,4 @@
-const App = require('./index');
+require('dotenv').config();
+const App = require('./App');
 
-const start = async () => {
-  try {
-    await App.server.listen(3000);
-  } catch (error) {
-    App.server.log.error(error);
-  }
-};
-
-start();
+App.server.listen(process.env.SERVER_PORT);
