@@ -1,7 +1,9 @@
-// controllers
-const User = require('./app/controller/user.controller');
+import { RouteOptions } from 'fastify/types/route';
 
-module.exports = [
+// controllers
+import User from '../app/controller/user.controller';
+
+export const userRoutes: RouteOptions[] = [
   {
     method: 'POST',
     url: '/user',
@@ -12,4 +14,4 @@ module.exports = [
     url: '/user',
     handler: User.index,
   },
-];
+]

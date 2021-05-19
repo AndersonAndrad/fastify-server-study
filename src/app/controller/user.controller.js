@@ -1,6 +1,6 @@
-const connection = require('../../database/connection');
-const uuid = require('uuid4');
-const yup = require('yup');
+import connection from '../../database/connection';
+import uuid from 'uuid4';
+import yup from 'yup';
 class UserController {
   async store(request, reply) {
     const schema = yup.object().shape({
@@ -56,4 +56,4 @@ class UserController {
   }
 }
 
-module.exports = new UserController();
+export default new UserController();

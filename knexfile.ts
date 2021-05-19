@@ -1,7 +1,6 @@
 require('dotenv').config();
 // Update with your config settings.
-module.exports = {
-  development: {
+export const development = {
     client: process.env.DB_DIALECT,
     connection: {
       host: process.env.DB_HOST,
@@ -45,5 +44,4 @@ module.exports = {
         tableName: 'knex_migrations',
       },
     },
-  },
-};
+  }
